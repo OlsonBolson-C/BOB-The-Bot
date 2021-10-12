@@ -1,0 +1,11 @@
+------------------------------------------------------------CUSTOM STATUS------------------------------------------------------------
+
+client.change_presence(activity=discord.Game(name='The Game')
+                                                   ---\/---
+client.change_presence(activity=discord.Game(name='f'on {len(client.guilds)} servers')
+                                                        
+client.change_presence(activity=discord.Streaming(name-'My Stream', url=https://www.twitch.tv/accountname)
+
+client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='a song'))
+
+client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='a movie'))
