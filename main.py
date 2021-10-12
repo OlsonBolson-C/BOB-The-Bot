@@ -46,6 +46,8 @@ def delete_encouragements(index):
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.Activity(
+        type=discord.ActivityType.watching, name='over servers.'))
     print('We have logged in as {0.user}'.format(client))
 
 
