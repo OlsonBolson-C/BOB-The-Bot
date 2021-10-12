@@ -5,6 +5,7 @@ import json
 import random
 from replit import db
 from keep_online import keep_online
+import asyncio
 
 client = discord.Client()
 
@@ -46,9 +47,25 @@ def delete_encouragements(index):
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Activity(
-        type=discord.ActivityType.watching, name='over servers.'))
     print('We have logged in as {0.user}'.format(client))
+
+
+async def rich_presence():
+    await client.wait_until_ready()
+
+    statuses = [
+        'what FBI is doing', 'David through a window', 'Netflix and chill',
+        'naked bums on a street', 'aliens'
+    ]
+    while not client.is_closed():
+        status = random.choice(statuses)
+        await client.change_presence(activity=discord.Activity(
+            type=discord.ActivityType.watching, name=status))
+
+        await asyncio.sleep(5)
+
+
+client.loop.create_task(rich_presence())
 
 
 @client.event
@@ -82,7 +99,7 @@ async def on_message(message):
         if "encouragements" in db.keys():
             index = int(msg.split(".del", 1)[1])
             delete_encouragements(index)
-            encouragements = db["encouragements"]
+            encouragements = db["encouragements"].value
         await message.channel.send(encouragements)
 
     if msg.startswith(".list"):
