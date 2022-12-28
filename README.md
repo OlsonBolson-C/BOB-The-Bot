@@ -9,6 +9,9 @@ BOB The Bot is open-source.
 
 - **Just check it out!** <br>
 Go on!
+
+- **Big update comming up!** <br>
+
 ***
 Made by [OlsonBolson](https://github.com/OlsonBolson-dev) <br> 
 How to reach me: [Discord](https://discord.com/users/444131047316389888)
