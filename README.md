@@ -1,11 +1,11 @@
-# BOB The Bot
+# The Corner Bot
 ![](https://img.shields.io/github/license/OlsonBolson-dev/BOB-The-Bot)
 ![](https://img.shields.io/github/last-commit/OlsonBolson-dev/BOB-The-Bot)
 
 ## Decription
 
 - **Open-source** <br>
-BOB The Bot is open-source.
+The Corner Bot is open-source.
 
 - **Just check it out!** <br>
 Go on!
